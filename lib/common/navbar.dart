@@ -8,7 +8,7 @@ class navbars extends StatelessWidget {
   @override
   Widget build(BuildContext context) 
   {
-    return Drawer(backgroundColor:Color.fromARGB(255, 235, 92, 92),
+    return Drawer(backgroundColor:const Color.fromARGB(255, 0, 0, 0),
     child: ListView(children: buildnavbar(context)
     ,)
     ,);
@@ -17,7 +17,7 @@ class navbars extends StatelessWidget {
   List<Widget> buildnavbar (BuildContext context)
   {
     List<Widget> menuItems= [];
-    menuItems.add(const DrawerHeader(child: Text('F1 MotorSports', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)
+    menuItems.add(const DrawerHeader(child: Text('F1 MotorSports', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.white),)
     ));
 
     final Set<String> menuTitles={ //set will be in capital S
@@ -26,10 +26,10 @@ class navbars extends StatelessWidget {
       "Races",
       "News"
     };
-    menuTitles.forEach((element) {
+    for (var element in menuTitles) {
       menuItems.add(ListTile(
         title: Text(element,
-        style: const TextStyle(fontSize: 20),),
+        style: const TextStyle(fontSize: 20,color: Colors.white),),
         onTap: () {
           Widget screen = Container();
           switch (element) {
@@ -51,7 +51,7 @@ class navbars extends StatelessWidget {
               .push(MaterialPageRoute(builder: (context) => screen));
         },
       ));
-     });
+     }
     return menuItems;
   }
 }
