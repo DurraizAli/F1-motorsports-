@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'screens/MyHomePage.dart';
 
 void main() {
@@ -12,7 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'F1 -The official home of formula',
+      
       theme: ThemeData(
         useMaterial3: true,
       ),
