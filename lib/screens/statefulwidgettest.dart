@@ -19,7 +19,7 @@ class _calculatorState extends State<calculator> {
     
         return Scaffold(    
           body: Container(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -32,7 +32,7 @@ class _calculatorState extends State<calculator> {
     result='The value of 1st controller is $value';
     setState(() {  });
   },
-  child: Text('Submit'),
+  child: const Text('Submit'),
 ),
                  Text("Result is $result"),
               ],
